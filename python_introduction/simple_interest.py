@@ -1,9 +1,9 @@
 #calculate simple interest
 
-pricipale = 1000
+principale = 1000
 rate = 0.05
 time = 3
-I = pricipale * rate * time
+I = principale * rate * time
 
 print("Simple Interest is:", I)
 
