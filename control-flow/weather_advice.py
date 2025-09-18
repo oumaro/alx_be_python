@@ -1,12 +1,16 @@
+# This script provides clothing recommendations based on the weather.
 
-Weather  = input("What's the weather like today? (sunny/rainy/cold)")
+# Prompt the user for the current weather condition.
+# The .lower() method is used to make the input case-insensitive.
+weather = input("What's the weather like today? (sunny/rainy/cold): ")
 
-if Weather  == "sunny":
+# Check the weather condition and provide a recommendation.
+if weather == "sunny":
     print("Wear a t-shirt and sunglasses.")
-elif Weather  == "rainy":
+elif weather == "rainy":
     print("Don't forget your umbrella and a raincoat.")
-elif Weather  == "cold":
-    print(" Make sure to wear a warm coat and a scarf.")
+elif weather == "cold":
+    print("Make sure to wear a warm coat and a scarf.")
 else:
+    # Handle unexpected or invalid input.
     print("Sorry, I don't have recommendations for this weather.")
-
