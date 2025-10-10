@@ -5,47 +5,34 @@ class Book:
     and destruction.
     """
 
-    def __init__(self, title: str, author: str, year: int):
+    def __init__(self, title, author, year):
         """
         Constructor method to initialize a new Book instance.
-
-        Args:
-            title (str): The title of the book.
-            author (str): The author of the book.
-            year (int): The publication year of the book.
         """
         self.title = title
         self.author = author
         self.year = year
-        # Optional: Print for verification of creation
-        # print(f"Book '{self.title}' created.")
 
-    def __str__(self) -> str:
+    def __str__(self):
         """
         Returns the user-friendly string representation of the Book object.
-
-        Returns:
-            str: A string in the format "(title) by (author), published in (year)".
+        Expected format: "(title) by (author), published in (year)".
         """
+        # Example: 1984 by George Orwell, published in 1949
         return f"{self.title} by {self.author}, published in {self.year}"
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         """
         Returns the official (developer-focused) string representation of the Book object.
-
-        Returns:
-            str: A string that can be used to recreate the object, 
-                 e.g., "Book('Title', 'Author', 2023)".
+        Expected format: f"Book('{self.title}', '{self.author}', {self.year})".
         """
+        # Example: Book('1984', 'George Orwell', 1949)
         return f"Book('{self.title}', '{self.author}', {self.year})"
 
     def __del__(self):
         """
         Destructor method called when the object is about to be destroyed (deleted).
-
         Prints a message indicating which book is being deleted.
         """
+        # Example: Deleting 1984
         print(f"Deleting {self.title}")
-
-# Note: The main.py script is provided for testing and should be separate.
-# The code above fulfills the requirement for the book_class.py file.
